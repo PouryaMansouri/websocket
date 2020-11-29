@@ -31,7 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    # 'channels',
+    'channels', 
     'echo',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -69,8 +69,10 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'websocket.wsgi.application'
+# WSGI_APPLICATION = 'websocket.wsgi.application'
 
+# channels
+ASGI_APPLICATION = 'websocket.routing.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
